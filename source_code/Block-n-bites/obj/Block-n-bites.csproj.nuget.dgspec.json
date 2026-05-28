@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IT AND CS\\IOOP_ASSIGNMENT\\Block-n-Bites\\source_code\\Block-n-bites\\Block-n-bites.csproj": {}
+    "C:\\Users\\Austin\\Desktop\\OOP\\Block-n-Bites\\source_code\\Block-n-bites\\Block-n-bites.csproj": {}
   },
   "projects": {
-    "D:\\IT AND CS\\IOOP_ASSIGNMENT\\Block-n-Bites\\source_code\\Block-n-bites\\Block-n-bites.csproj": {
+    "C:\\Users\\Austin\\Desktop\\OOP\\Block-n-Bites\\source_code\\Block-n-bites\\Block-n-bites.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IT AND CS\\IOOP_ASSIGNMENT\\Block-n-Bites\\source_code\\Block-n-bites\\Block-n-bites.csproj",
+        "projectUniqueName": "C:\\Users\\Austin\\Desktop\\OOP\\Block-n-Bites\\source_code\\Block-n-bites\\Block-n-bites.csproj",
         "projectName": "Block-n-bites",
-        "projectPath": "D:\\IT AND CS\\IOOP_ASSIGNMENT\\Block-n-Bites\\source_code\\Block-n-bites\\Block-n-bites.csproj",
-        "packagesPath": "C:\\Users\\heryp\\.nuget\\packages\\",
-        "outputPath": "D:\\IT AND CS\\IOOP_ASSIGNMENT\\Block-n-Bites\\source_code\\Block-n-bites\\obj\\",
+        "projectPath": "C:\\Users\\Austin\\Desktop\\OOP\\Block-n-Bites\\source_code\\Block-n-bites\\Block-n-bites.csproj",
+        "packagesPath": "C:\\Users\\Austin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Austin\\Desktop\\OOP\\Block-n-Bites\\source_code\\Block-n-bites\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\heryp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Austin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -51,6 +52,12 @@
         "net8.0-windows": {
           "framework": "net8.0-windows7.0",
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.0.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

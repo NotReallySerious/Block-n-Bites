@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Block-n-bites")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9af8f3c3cbb85c7f43d801fd4b498f6ffab28cdf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+98ac576a12d30f32e8221816360dae59e98d386b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Block-n-bites")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Block-n-bites")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
