@@ -1,0 +1,48 @@
+namespace Gr8Food_SourceCode_Group15
+{
+    internal static class Program
+    {
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
+            while (true)
+            {
+                using var login = new frmLogin();
+                var result = login.ShowDialog();
+                if (result == System.Windows.Forms.DialogResult.OK)
+                {
+                    var role = login.Tag as string ?? "Profile";
+                    Form main = role switch
+                    {
+                        "Admin" => new Admin(),
+                        "Manager" => new Manager(),
+                        "Chef" => new Chef(),
+                        "Customer" => new Customer(),
+                        _ => new Profile()
+                    };
+                    Application.Run(main);
+                    break; // main closed -> exit app
+                }
+                else
+                {
+                    // if login requested registration, open register form
+                    if ((login.Tag as string) == "OpenRegister")
+                    {
+                        using var reg = new frmregister();
+                        var r = reg.ShowDialog();
+                        // After registration closes, loop back to show login again
+                        continue;
+                    }
+                    // any other result -> exit
+                    break;
+                }
+            }
+        }
+    }
+}

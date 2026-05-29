@@ -1,0 +1,78 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+
+namespace Gr8Food_SourceCode_Group15
+{
+    public partial class frmLogin : Form
+    {
+        public frmLogin()
+        {
+            InitializeComponent();
+            btnLogin.Click += BtnLogin_Click;
+            btnRegister.Click += BtnRegister_Click;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRegister_Click(object? sender, EventArgs e)
+        {
+            var reg = new frmregister();
+            reg.ShowDialog();
+        }
+
+        private void BtnLogin_Click(object? sender, EventArgs e)
+        {
+            var username = txtName.Text.Trim();
+            var password = txtPassword.Text;
+
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Please enter username and password." , "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                var role = Database.AuthenticateUser(username, password);
+                if (role == null)
+                {
+                    MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Open role specific form
+                Form next = role switch
+                {
+                    "Admin" => new Admin(),
+                    "Manager" => new Manager(),
+                    "Chef" => new Chef(),
+                    "Customer" => new Customer(),
+                    _ => new Profile()
+                };
+
+                Hide();
+                next.FormClosed += (s, ev) => this.Show();
+                next.Show();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Database error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unexpected error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
+}

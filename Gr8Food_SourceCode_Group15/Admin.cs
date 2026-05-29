@@ -1,0 +1,194 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data;
+using Microsoft.Data.SqlClient;
+
+namespace Gr8Food_SourceCode_Group15
+{
+    public partial class Admin : Form
+    {
+        public Admin()
+        {
+            InitializeComponent();
+            btnAddRemove.Click += BtnAddRemove_Click;
+            // find controls created in designer at runtime
+            this.Load += Admin_Load;
+        }
+
+        private DataGridView? dgvUsers;
+        private TextBox? txtUserId;
+        private TextBox? txtNameInput;
+        private TextBox? txtEmailInput;
+        private TextBox? txtPasswordInput;
+        private TextBox? txtRoleInput;
+        private TextBox? txtBBCInput;
+        private Button? btnAddUser;
+        private Button? btnUpdateUserInner;
+        private Button? btnDeleteUser;
+
+        private void Admin_Load(object? sender, EventArgs e)
+        {
+            // locate the controls by name inside grpDashboard
+            dgvUsers = grpDashboard.Controls.Find("dgvUsers", true).FirstOrDefault() as DataGridView;
+            txtUserId = grpDashboard.Controls.Find("txtUserId", true).FirstOrDefault() as TextBox;
+            txtNameInput = grpDashboard.Controls.Find("txtNameInput", true).FirstOrDefault() as TextBox;
+            txtEmailInput = grpDashboard.Controls.Find("txtEmailInput", true).FirstOrDefault() as TextBox;
+            txtPasswordInput = grpDashboard.Controls.Find("txtPasswordInput", true).FirstOrDefault() as TextBox;
+            txtRoleInput = grpDashboard.Controls.Find("txtRoleInput", true).FirstOrDefault() as TextBox;
+            txtBBCInput = grpDashboard.Controls.Find("txtBBCInput", true).FirstOrDefault() as TextBox;
+            btnAddUser = grpDashboard.Controls.Find("btnAddUser", true).FirstOrDefault() as Button;
+            btnUpdateUserInner = grpDashboard.Controls.Find("btnUpdateUserInner", true).FirstOrDefault() as Button;
+            btnDeleteUser = grpDashboard.Controls.Find("btnDeleteUser", true).FirstOrDefault() as Button;
+
+            if (dgvUsers != null)
+            {
+                dgvUsers.CellClick += DgvUsers_CellClick;
+            }
+
+            if (btnAddUser != null) btnAddUser.Click += BtnAddUser_Click;
+            if (btnUpdateUserInner != null) btnUpdateUserInner.Click += BtnUpdateUserInner_Click;
+            if (btnDeleteUser != null) btnDeleteUser.Click += BtnDeleteUser_Click;
+        }
+
+        private void BtnAddRemove_Click(object? sender, EventArgs e)
+        {
+            LoadUsersIntoGrid();
+        }
+
+        private void LoadUsersIntoGrid()
+        {
+            try
+            {
+                var dt = Database.GetAllUsers();
+                if (dgvUsers != null)
+                {
+                    dgvUsers.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to load users: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DgvUsers_CellClick(object? sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvUsers == null) return;
+            if (e.RowIndex < 0 || e.RowIndex >= dgvUsers.Rows.Count) return;
+            var row = dgvUsers.Rows[e.RowIndex];
+            txtUserId!.Text = row.Cells["UserID"].Value?.ToString() ?? string.Empty;
+            txtNameInput!.Text = row.Cells["Name"].Value?.ToString() ?? string.Empty;
+            txtEmailInput!.Text = row.Cells["Email"].Value?.ToString() ?? string.Empty;
+            txtRoleInput!.Text = row.Cells["Role"].Value?.ToString() ?? string.Empty;
+            txtBBCInput!.Text = row.Cells["BBCBalance"].Value?.ToString() ?? "0";
+            txtPasswordInput!.Text = string.Empty; // don't populate password
+        }
+
+        private void BtnAddUser_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                var name = txtNameInput!.Text.Trim();
+                var email = txtEmailInput!.Text.Trim();
+                var password = txtPasswordInput!.Text;
+                var role = txtRoleInput!.Text.Trim();
+                decimal bbc = 0m;
+                decimal.TryParse(txtBBCInput!.Text, out bbc);
+
+                if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(role))
+                {
+                    MessageBox.Show("Please fill name, email, password and role to add a user.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                var ok = Database.AddUser(name, email, password, role, bbc);
+                if (ok)
+                {
+                    MessageBox.Show("User added.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadUsersIntoGrid();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to add user. Email may already exist.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error adding user: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnUpdateUserInner_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                if (!int.TryParse(txtUserId!.Text, out var id))
+                {
+                    MessageBox.Show("Select a user to update.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                var name = txtNameInput!.Text.Trim();
+                var email = txtEmailInput!.Text.Trim();
+                var password = txtPasswordInput!.Text; // optional
+                var role = txtRoleInput!.Text.Trim();
+                decimal bbc = 0m;
+                decimal.TryParse(txtBBCInput!.Text, out bbc);
+
+                var ok = Database.UpdateUser(id, name, email, string.IsNullOrEmpty(password) ? null : password, role, bbc);
+                if (ok)
+                {
+                    MessageBox.Show("User updated.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadUsersIntoGrid();
+                }
+                else
+                {
+                    MessageBox.Show("No rows updated.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating user: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void BtnDeleteUser_Click(object? sender, EventArgs e)
+        {
+            try
+            {
+                if (!int.TryParse(txtUserId!.Text, out var id))
+                {
+                    MessageBox.Show("Select a user to delete.", "Validation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                var confirm = MessageBox.Show("Are you sure you want to delete this user?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm != DialogResult.Yes) return;
+                var ok = Database.DeleteUser(id);
+                if (ok)
+                {
+                    MessageBox.Show("User deleted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadUsersIntoGrid();
+                }
+                else
+                {
+                    MessageBox.Show("Failed to delete user.", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error deleting user: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}

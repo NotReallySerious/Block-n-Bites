@@ -1,0 +1,46 @@
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace Gr8Food_SourceCode_Group15
+{
+    static class Database
+    {
+        // TODO: update this connection string to point to your database server and initial catalog
+        private static readonly string ConnectionString = "Server=localhost;Database=Gr8Food;Trusted_Connection=True;MultipleActiveResultSets=true;";
+
+        public static string? AuthenticateUser(string username, string password)
+        {
+            using var conn = new SqlConnection(ConnectionString);
+            conn.Open();
+            using var cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT Role FROM Users WHERE Email = @user AND Password = @pass";
+            cmd.Parameters.AddWithValue("@user", username);
+            cmd.Parameters.AddWithValue("@pass", password);
+            var role = cmd.ExecuteScalar();
+            return role == null || role == DBNull.Value ? null : Convert.ToString(role);
+        }
+
+        public static bool RegisterUser(string name, string email, string password, string role)
+        {
+            using var conn = new SqlConnection(ConnectionString);
+            conn.Open();
+            using var cmd = conn.CreateCommand();
+            cmd.CommandText = "INSERT INTO Users (Name, Email, Password, Role) VALUES (@name, @email, @pass, @role)";
+            cmd.Parameters.AddWithValue("@name", name);
+            cmd.Parameters.AddWithValue("@email", email);
+            cmd.Parameters.AddWithValue("@pass", password);
+            cmd.Parameters.AddWithValue("@role", role);
+            try
+            {
+                var rows = cmd.ExecuteNonQuery();
+                return rows > 0;
+            }
+            catch (SqlException ex) when (ex.Number == 2627 || ex.Number == 2601)
+            {
+                // duplicate key (unique email)
+                return false;
+            }
+        }
+    }
+}

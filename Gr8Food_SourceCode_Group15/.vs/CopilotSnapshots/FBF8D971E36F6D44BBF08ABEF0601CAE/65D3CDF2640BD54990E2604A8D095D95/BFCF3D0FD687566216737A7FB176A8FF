@@ -1,0 +1,157 @@
+﻿namespace Gr8Food_SourceCode_Group15
+{
+    partial class Admin
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
+            pictureBox1 = new PictureBox();
+            txtGreetAdmin = new Label();
+            btnLogOut = new Button();
+            btnEditProfile = new Button();
+            grpDashboard = new GroupBox();
+            btnUpdateUser = new Button();
+            btnSalesReport = new Button();
+            btnAddRemove = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox1.Location = new Point(26, 22);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 100);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
+            // 
+            // txtGreetAdmin
+            // 
+            txtGreetAdmin.AutoSize = true;
+            txtGreetAdmin.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtGreetAdmin.Location = new Point(132, 22);
+            txtGreetAdmin.Name = "txtGreetAdmin";
+            txtGreetAdmin.Size = new Size(227, 47);
+            txtGreetAdmin.TabIndex = 1;
+            txtGreetAdmin.Text = "Hello Admin";
+            // 
+            // btnLogOut
+            // 
+            btnLogOut.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogOut.Location = new Point(1114, 12);
+            btnLogOut.Name = "btnLogOut";
+            btnLogOut.Size = new Size(138, 36);
+            btnLogOut.TabIndex = 2;
+            btnLogOut.Text = "Log Out";
+            btnLogOut.UseVisualStyleBackColor = true;
+            // 
+            // btnEditProfile
+            // 
+            btnEditProfile.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEditProfile.Location = new Point(965, 12);
+            btnEditProfile.Name = "btnEditProfile";
+            btnEditProfile.Size = new Size(126, 36);
+            btnEditProfile.TabIndex = 3;
+            btnEditProfile.Text = "Edit Profile";
+            btnEditProfile.UseVisualStyleBackColor = true;
+            // 
+            // grpDashboard
+            // 
+            grpDashboard.BackColor = Color.Transparent;
+            grpDashboard.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            grpDashboard.Location = new Point(28, 158);
+            grpDashboard.Name = "grpDashboard";
+            grpDashboard.Size = new Size(1198, 489);
+            grpDashboard.TabIndex = 4;
+            grpDashboard.TabStop = false;
+            grpDashboard.Text = "Dashboard";
+            // 
+            // btnUpdateUser
+            // 
+            btnUpdateUser.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpdateUser.Location = new Point(313, 81);
+            btnUpdateUser.Name = "btnUpdateUser";
+            btnUpdateUser.Size = new Size(154, 41);
+            btnUpdateUser.TabIndex = 5;
+            btnUpdateUser.Text = "Update User Profile";
+            btnUpdateUser.UseVisualStyleBackColor = true;
+            // 
+            // btnSalesReport
+            // 
+            btnSalesReport.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSalesReport.Location = new Point(485, 81);
+            btnSalesReport.Name = "btnSalesReport";
+            btnSalesReport.Size = new Size(154, 41);
+            btnSalesReport.TabIndex = 5;
+            btnSalesReport.Text = "View Sales Report";
+            btnSalesReport.UseVisualStyleBackColor = true;
+            // 
+            // btnAddRemove
+            // 
+            btnAddRemove.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAddRemove.Location = new Point(138, 81);
+            btnAddRemove.Name = "btnAddRemove";
+            btnAddRemove.Size = new Size(154, 41);
+            btnAddRemove.TabIndex = 5;
+            btnAddRemove.Text = "Add or Remove User";
+            btnAddRemove.UseVisualStyleBackColor = true;
+            // 
+            // Admin
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Wheat;
+            ClientSize = new Size(1264, 681);
+            Controls.Add(btnAddRemove);
+            Controls.Add(btnSalesReport);
+            Controls.Add(btnUpdateUser);
+            Controls.Add(grpDashboard);
+            Controls.Add(btnEditProfile);
+            Controls.Add(btnLogOut);
+            Controls.Add(txtGreetAdmin);
+            Controls.Add(pictureBox1);
+            Name = "Admin";
+            Text = "Admin";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private PictureBox pictureBox1;
+        private Label txtGreetAdmin;
+        private Button btnLogOut;
+        private Button btnEditProfile;
+        private GroupBox grpDashboard;
+        private Button btnUpdateUser;
+        private Button btnSalesReport;
+        private Button btnAddRemove;
+    }
+}
