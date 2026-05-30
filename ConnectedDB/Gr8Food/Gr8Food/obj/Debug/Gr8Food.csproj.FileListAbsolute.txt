@@ -1,0 +1,16 @@
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\bin\Debug\Gr8Food.exe.config
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\bin\Debug\Gr8Food.exe
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\bin\Debug\Gr8Food.pdb
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.csproj.AssemblyReference.cache
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.Properties.Resources.resources
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.csproj.GenerateResource.cache
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.csproj.CoreCompileInputs.cache
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.exe
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.pdb
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.MainChef.resources
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.testing.resources
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.Logincs.resources
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefMenu.resources
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefNewItem.resources
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefManageOrders.resources
+C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefUpdateProfile.resources
