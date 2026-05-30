@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|d:\\it and cs\\gr8food\\gr8food_sourcecode_group15\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|d:\\it and cs\\gr8food\\gr8food_sourcecode_group15\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9ADDD7A6-EE60-48CD-B26B-7D1703DEFAEA}|Gr8Food_SourceCode_Group15.csproj|D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9ADDD7A6-EE60-48CD-B26B-7D1703DEFAEA}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|d:\\it and cs\\gr8food\\gr8food_sourcecode_group15\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|d:\\it and cs\\gr8food\\gr8food_sourcecode_group15\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|d:\\it and cs\\gr8food\\gr8food_sourcecode_group15\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|d:\\it and cs\\gr8food\\gr8food_sourcecode_group15\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|d:\\it and cs\\gr8food\\gr8food_sourcecode_group15\\gr8food_sourcecode_group15.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -46,26 +50,6 @@
       "RelativeMoniker": "D:0:0:{9ADDD7A6-EE60-48CD-B26B-7D1703DEFAEA}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9ADDD7A6-EE60-48CD-B26B-7D1703DEFAEA}|Gr8Food_SourceCode_Group15.csproj|D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9ADDD7A6-EE60-48CD-B26B-7D1703DEFAEA}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9ADDD7A6-EE60-48CD-B26B-7D1703DEFAEA}|Gr8Food_SourceCode_Group15.csproj|D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9ADDD7A6-EE60-48CD-B26B-7D1703DEFAEA}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:manager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9ADDD7A6-EE60-48CD-B26B-7D1703DEFAEA}|Gr8Food_SourceCode_Group15.csproj|D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\chef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9ADDD7A6-EE60-48CD-B26B-7D1703DEFAEA}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:chef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9ADDD7A6-EE60-48CD-B26B-7D1703DEFAEA}|Gr8Food_SourceCode_Group15.csproj|D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9ADDD7A6-EE60-48CD-B26B-7D1703DEFAEA}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|d:\\it and cs\\gr8food\\gr8food_sourcecode_group15\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|d:\\it and cs\\gr8food\\gr8food_sourcecode_group15\\admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08DB1E48-B7C9-CEEB-AEC9-A52C1EBD18A8}|Gr8Food_SourceCode_Group15.csproj|solutionrelative:admin.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -81,21 +65,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.config",
-              "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\App.config",
-              "RelativeDocumentMoniker": "App.config",
-              "ToolTip": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\App.config*",
-              "RelativeToolTip": "App.config*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-05-29T04:01:05.613Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -103,6 +74,31 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "App.config",
+              "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-05-29T04:01:05.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "register.cs [Design]",
+              "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\register.cs",
+              "RelativeDocumentMoniker": "register.cs",
+              "ToolTip": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\register.cs [Design]",
+              "RelativeToolTip": "register.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-29T03:50:54.774Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Login.cs [Design]",
               "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Login.cs",
               "RelativeDocumentMoniker": "Login.cs",
@@ -114,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "dbo.Users.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__IT_AND_CS_GR8FOOD_GR8FOOD_SOURCECODE_GROUP15_G15_GR8FOOD.MDF/True/SqlTable/dbo.Users.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/D__IT_AND_CS_GR8FOOD_GR8FOOD_SOURCECODE_GROUP15_G15_GR8FOOD.MDF/True/SqlTable/dbo.Users.sql",
@@ -123,12 +119,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "App.config",
               "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\App.config",
               "RelativeDocumentMoniker": "App.config",
-              "ToolTip": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\App.config*",
-              "RelativeToolTip": "App.config*",
+              "ToolTip": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\App.config",
+              "RelativeToolTip": "App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
               "WhenOpened": "2026-05-29T03:35:33.262Z",
@@ -136,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "Admin.cs [Design]",
               "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Admin.cs",
               "RelativeDocumentMoniker": "Admin.cs",
@@ -148,19 +144,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 1,
               "Title": "Admin.cs",
               "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Admin.cs",
               "RelativeDocumentMoniker": "Admin.cs",
               "ToolTip": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Admin.cs",
               "RelativeToolTip": "Admin.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAD4v74AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAL4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T17:15:14.421Z"
+              "WhenOpened": "2026-05-28T17:15:14.421Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 12,
               "Title": "Admin.Designer.cs",
               "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Admin.Designer.cs",
               "RelativeDocumentMoniker": "Admin.Designer.cs",
@@ -173,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Gr8Food_SourceCode_Group15.csproj",
               "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Gr8Food_SourceCode_Group15.csproj",
               "RelativeDocumentMoniker": "Gr8Food_SourceCode_Group15.csproj",
@@ -186,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Database.cs",
               "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Database.cs",
               "RelativeDocumentMoniker": "Database.cs",
@@ -198,20 +195,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "register.cs",
               "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\register.cs",
               "RelativeDocumentMoniker": "register.cs",
               "ToolTip": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\register.cs",
               "RelativeToolTip": "register.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAD0AAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-28T17:08:56.841Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Login.cs",
               "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Login.cs",
               "RelativeDocumentMoniker": "Login.cs",
@@ -224,7 +221,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 13,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -232,12 +229,11 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAACsAAAAAAAAAAIBJwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T17:08:34.389Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-28T17:08:34.389Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Profile.cs [Design]",
               "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Profile.cs",
               "RelativeDocumentMoniker": "Profile.cs",
@@ -245,61 +241,6 @@
               "RelativeToolTip": "Profile.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-28T16:42:40.448Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "register.cs [Design]",
-              "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\register.cs",
-              "RelativeDocumentMoniker": "register.cs",
-              "ToolTip": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\register.cs [Design]",
-              "RelativeToolTip": "register.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T16:31:55.523Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Chef.cs [Design]",
-              "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Chef.cs",
-              "RelativeDocumentMoniker": "Chef.cs",
-              "ToolTip": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Chef.cs [Design]",
-              "RelativeToolTip": "Chef.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T15:51:12.374Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Manager.cs [Design]",
-              "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Manager.cs",
-              "RelativeDocumentMoniker": "Manager.cs",
-              "ToolTip": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Manager.cs [Design]",
-              "RelativeToolTip": "Manager.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T15:50:32.664Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Customer.cs [Design]",
-              "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Customer.cs",
-              "RelativeDocumentMoniker": "Customer.cs",
-              "ToolTip": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Customer.cs [Design]",
-              "RelativeToolTip": "Customer.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T15:50:14.737Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Login.cs",
-              "RelativeDocumentMoniker": "Login.cs",
-              "ToolTip": "D:\\IT AND CS\\Gr8Food\\Gr8Food_SourceCode_Group15\\Login.cs [Design]",
-              "RelativeToolTip": "Login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-28T15:45:28.535Z"
             }
           ]
         }

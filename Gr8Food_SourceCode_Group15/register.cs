@@ -36,6 +36,32 @@ namespace Gr8Food_SourceCode_Group15
                 return;
             }
 
+            // validate email format
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                if (addr.Address != email)
+                {
+                    throw new FormatException("Invalid email");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Please enter a valid email address.", "Register", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtEmail.Focus();
+                return;
+            }
+
+            // validate password strength: at least 12 chars, one digit, one upper, one lower, one special
+            var pwd = password;
+            if (pwd.Length < 12 || !pwd.Any(char.IsDigit) || !pwd.Any(char.IsUpper) || !pwd.Any(char.IsLower) || !pwd.Any(ch => !char.IsLetterOrDigit(ch)))
+            {
+                MessageBox.Show("Password must be at least 12 characters and include at least one digit, one uppercase letter, one lowercase letter, and one special character.", "Register", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPassword.Text = string.Empty;
+                txtPassword.Focus();
+                return;
+            }
+
             try
             {
                 var ok = Database.RegisterUser(name, email, password, "Customer");

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Gr8Food_SourceCode_Group15")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b6918765467e7fb1c531cdb22f3d388a0e296cbf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+219753d62a95fea78e5fcf77a92fccd76a7e53bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Gr8Food_SourceCode_Group15")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Gr8Food_SourceCode_Group15")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
