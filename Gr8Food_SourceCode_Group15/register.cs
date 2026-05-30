@@ -68,6 +68,7 @@ namespace Gr8Food_SourceCode_Group15
                 if (ok)
                 {
                     MessageBox.Show("Registration successful. You can now log in.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Session.LastRegisteredEmail = email;
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }

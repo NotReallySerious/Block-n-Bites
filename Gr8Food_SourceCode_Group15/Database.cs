@@ -14,11 +14,69 @@ namespace Gr8Food_SourceCode_Group15
             using var conn = new SqlConnection(ConnectionString);
             conn.Open();
             using var cmd = conn.CreateCommand();
-            cmd.CommandText = "SELECT Role FROM Users WHERE Email = @user AND Password = @pass";
+            // allow login by email or username
+            cmd.CommandText = "SELECT Role FROM Users WHERE (Email = @user OR Name = @user) AND Password = @pass";
             cmd.Parameters.AddWithValue("@user", username);
             cmd.Parameters.AddWithValue("@pass", password);
             var role = cmd.ExecuteScalar();
-            return role == null || role == DBNull.Value ? null : Convert.ToString(role);
+            if (role == null || role == DBNull.Value) return null;
+            var roleStr = Convert.ToString(role);
+            return string.IsNullOrWhiteSpace(roleStr) ? null : roleStr.Trim();
+        }
+
+        public static void TestConnection()
+        {
+            using var conn = new SqlConnection(ConnectionString);
+            conn.Open();
+            // if open succeeds, nothing to do
+            conn.Close();
+        }
+
+        // Return the connection string used (for diagnostics only)
+        public static string GetConnectionStringForDiagnostics()
+        {
+            return ConnectionString;
+        }
+
+        // Find user row by email or name for diagnostics
+        public static DataRow? FindUserRecord(string identifier)
+        {
+            var dt = new DataTable();
+            using var conn = new SqlConnection(ConnectionString);
+            conn.Open();
+            using var cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT TOP 1 UserID, Name, Email, Password, Role FROM Users WHERE Email = @id OR Name = @id";
+            cmd.Parameters.AddWithValue("@id", identifier);
+            using var da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+            return dt.Rows[0];
+        }
+
+        public static DataTable GetUserList()
+        {
+            var dt = new DataTable();
+            using var conn = new SqlConnection(ConnectionString);
+            conn.Open();
+            using var cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT UserID, Name FROM Users ORDER BY UserID";
+            using var da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            return dt;
+        }
+
+        public static DataRow? GetUserById(int id)
+        {
+            var dt = new DataTable();
+            using var conn = new SqlConnection(ConnectionString);
+            conn.Open();
+            using var cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT UserID, Name, Email, Password, Role, BBCBalance FROM Users WHERE UserID = @id";
+            cmd.Parameters.AddWithValue("@id", id);
+            using var da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            if (dt.Rows.Count == 0) return null;
+            return dt.Rows[0];
         }
 
         public static bool RegisterUser(string name, string email, string password, string role)

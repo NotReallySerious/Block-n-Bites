@@ -37,7 +37,7 @@
             dgvUsers = new DataGridView();
             pnlInputs = new Panel();
             lblId = new Label();
-            txtUserId = new TextBox();
+            cmbUserId = new ComboBox();
             lblName = new Label();
             txtNameInput = new TextBox();
             lblEmail = new Label();
@@ -45,7 +45,6 @@
             lblPassword = new Label();
             txtPasswordInput = new TextBox();
             lblRole = new Label();
-            txtRoleInput = new TextBox();
             lblBBC = new Label();
             txtBBCInput = new TextBox();
             btnAddUser = new Button();
@@ -54,6 +53,7 @@
             btnUpdateUser = new Button();
             btnSalesReport = new Button();
             btnAddRemove = new Button();
+            cmbRole = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             grpDashboard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsers).BeginInit();
@@ -65,9 +65,10 @@
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox1.Location = new Point(26, 22);
+            pictureBox1.Location = new Point(48, 47);
+            pictureBox1.Margin = new Padding(6);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(100, 100);
+            pictureBox1.Size = new Size(182, 209);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -75,18 +76,20 @@
             // 
             txtGreetAdmin.AutoSize = true;
             txtGreetAdmin.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtGreetAdmin.Location = new Point(132, 22);
+            txtGreetAdmin.Location = new Point(245, 47);
+            txtGreetAdmin.Margin = new Padding(6, 0, 6, 0);
             txtGreetAdmin.Name = "txtGreetAdmin";
-            txtGreetAdmin.Size = new Size(227, 47);
+            txtGreetAdmin.Size = new Size(452, 93);
             txtGreetAdmin.TabIndex = 1;
             txtGreetAdmin.Text = "Hello Admin";
             // 
             // btnLogOut
             // 
             btnLogOut.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogOut.Location = new Point(1114, 12);
+            btnLogOut.Location = new Point(2069, 26);
+            btnLogOut.Margin = new Padding(6);
             btnLogOut.Name = "btnLogOut";
-            btnLogOut.Size = new Size(138, 36);
+            btnLogOut.Size = new Size(256, 77);
             btnLogOut.TabIndex = 2;
             btnLogOut.Text = "Log Out";
             btnLogOut.UseVisualStyleBackColor = true;
@@ -95,9 +98,10 @@
             // btnEditProfile
             // 
             btnEditProfile.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEditProfile.Location = new Point(965, 12);
+            btnEditProfile.Location = new Point(1792, 26);
+            btnEditProfile.Margin = new Padding(6);
             btnEditProfile.Name = "btnEditProfile";
-            btnEditProfile.Size = new Size(126, 36);
+            btnEditProfile.Size = new Size(234, 77);
             btnEditProfile.TabIndex = 3;
             btnEditProfile.Text = "Edit Profile";
             btnEditProfile.UseVisualStyleBackColor = true;
@@ -108,9 +112,11 @@
             grpDashboard.Controls.Add(dgvUsers);
             grpDashboard.Controls.Add(pnlInputs);
             grpDashboard.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            grpDashboard.Location = new Point(28, 158);
+            grpDashboard.Location = new Point(52, 337);
+            grpDashboard.Margin = new Padding(6);
             grpDashboard.Name = "grpDashboard";
-            grpDashboard.Size = new Size(1198, 489);
+            grpDashboard.Padding = new Padding(6);
+            grpDashboard.Size = new Size(2225, 1043);
             grpDashboard.TabIndex = 4;
             grpDashboard.TabStop = false;
             grpDashboard.Text = "Dashboard";
@@ -119,17 +125,22 @@
             // 
             dgvUsers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvUsers.BackgroundColor = SystemColors.ButtonFace;
-            dgvUsers.Location = new Point(20, 40);
+            dgvUsers.ColumnHeadersHeight = 46;
+            dgvUsers.Location = new Point(37, 85);
+            dgvUsers.Margin = new Padding(6);
             dgvUsers.Name = "dgvUsers";
             dgvUsers.ReadOnly = true;
+            dgvUsers.RowHeadersWidth = 82;
             dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvUsers.Size = new Size(760, 420);
+            dgvUsers.Size = new Size(1411, 896);
             dgvUsers.TabIndex = 0;
+            dgvUsers.CellContentClick += dgvUsers_CellContentClick;
             // 
             // pnlInputs
             // 
+            pnlInputs.Controls.Add(cmbRole);
             pnlInputs.Controls.Add(lblId);
-            pnlInputs.Controls.Add(txtUserId);
+            pnlInputs.Controls.Add(cmbUserId);
             pnlInputs.Controls.Add(lblName);
             pnlInputs.Controls.Add(txtNameInput);
             pnlInputs.Controls.Add(lblEmail);
@@ -137,141 +148,151 @@
             pnlInputs.Controls.Add(lblPassword);
             pnlInputs.Controls.Add(txtPasswordInput);
             pnlInputs.Controls.Add(lblRole);
-            pnlInputs.Controls.Add(txtRoleInput);
             pnlInputs.Controls.Add(lblBBC);
             pnlInputs.Controls.Add(txtBBCInput);
             pnlInputs.Controls.Add(btnAddUser);
             pnlInputs.Controls.Add(btnUpdateUserInner);
             pnlInputs.Controls.Add(btnDeleteUser);
-            pnlInputs.Location = new Point(800, 40);
+            pnlInputs.Location = new Point(1486, 85);
+            pnlInputs.Margin = new Padding(6);
             pnlInputs.Name = "pnlInputs";
-            pnlInputs.Size = new Size(380, 420);
+            pnlInputs.Size = new Size(706, 896);
             pnlInputs.TabIndex = 1;
             // 
             // lblId
             // 
-            lblId.Location = new Point(10, 10);
+            lblId.Location = new Point(19, 21);
+            lblId.Margin = new Padding(6, 0, 6, 0);
             lblId.Name = "lblId";
-            lblId.Size = new Size(100, 23);
+            lblId.Size = new Size(186, 49);
             lblId.TabIndex = 0;
             lblId.Text = "UserID:";
             // 
-            // txtUserId
+            // cmbUserId
             // 
-            txtUserId.Location = new Point(10, 35);
-            txtUserId.Name = "txtUserId";
-            txtUserId.ReadOnly = true;
-            txtUserId.Size = new Size(350, 33);
-            txtUserId.TabIndex = 1;
+            cmbUserId.FormattingEnabled = true;
+            cmbUserId.Location = new Point(19, 75);
+            cmbUserId.Margin = new Padding(6);
+            cmbUserId.Name = "cmbUserId";
+            cmbUserId.Size = new Size(647, 58);
+            cmbUserId.TabIndex = 1;
             // 
             // lblName
             // 
-            lblName.Location = new Point(10, 70);
+            lblName.Location = new Point(19, 149);
+            lblName.Margin = new Padding(6, 0, 6, 0);
             lblName.Name = "lblName";
-            lblName.Size = new Size(100, 23);
+            lblName.Size = new Size(186, 49);
             lblName.TabIndex = 2;
             lblName.Text = "Name:";
             // 
             // txtNameInput
             // 
-            txtNameInput.Location = new Point(10, 95);
+            txtNameInput.Location = new Point(19, 203);
+            txtNameInput.Margin = new Padding(6);
             txtNameInput.Name = "txtNameInput";
-            txtNameInput.Size = new Size(350, 33);
+            txtNameInput.Size = new Size(647, 58);
             txtNameInput.TabIndex = 3;
             // 
             // lblEmail
             // 
-            lblEmail.Location = new Point(10, 130);
+            lblEmail.Location = new Point(19, 277);
+            lblEmail.Margin = new Padding(6, 0, 6, 0);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(100, 23);
+            lblEmail.Size = new Size(186, 49);
             lblEmail.TabIndex = 4;
             lblEmail.Text = "Email:";
             // 
             // txtEmailInput
             // 
-            txtEmailInput.Location = new Point(10, 155);
+            txtEmailInput.Location = new Point(19, 331);
+            txtEmailInput.Margin = new Padding(6);
             txtEmailInput.Name = "txtEmailInput";
-            txtEmailInput.Size = new Size(350, 33);
+            txtEmailInput.Size = new Size(647, 58);
             txtEmailInput.TabIndex = 5;
             // 
             // lblPassword
             // 
-            lblPassword.Location = new Point(10, 190);
+            lblPassword.Location = new Point(19, 405);
+            lblPassword.Margin = new Padding(6, 0, 6, 0);
             lblPassword.Name = "lblPassword";
-            lblPassword.Size = new Size(100, 23);
+            lblPassword.Size = new Size(238, 49);
             lblPassword.TabIndex = 6;
             lblPassword.Text = "Password:";
+            lblPassword.Click += lblPassword_Click;
             // 
             // txtPasswordInput
             // 
-            txtPasswordInput.Location = new Point(10, 215);
+            txtPasswordInput.Location = new Point(19, 459);
+            txtPasswordInput.Margin = new Padding(6);
             txtPasswordInput.Name = "txtPasswordInput";
-            txtPasswordInput.Size = new Size(350, 33);
+            txtPasswordInput.Size = new Size(647, 58);
             txtPasswordInput.TabIndex = 7;
             // 
             // lblRole
             // 
-            lblRole.Location = new Point(10, 250);
+            lblRole.Location = new Point(19, 533);
+            lblRole.Margin = new Padding(6, 0, 6, 0);
             lblRole.Name = "lblRole";
-            lblRole.Size = new Size(100, 23);
+            lblRole.Size = new Size(186, 49);
             lblRole.TabIndex = 8;
             lblRole.Text = "Role:";
             // 
-            // txtRoleInput
-            // 
-            txtRoleInput.Location = new Point(10, 275);
-            txtRoleInput.Name = "txtRoleInput";
-            txtRoleInput.Size = new Size(350, 33);
-            txtRoleInput.TabIndex = 9;
-            // 
             // lblBBC
             // 
-            lblBBC.Location = new Point(10, 310);
+            lblBBC.Location = new Point(19, 661);
+            lblBBC.Margin = new Padding(6, 0, 6, 0);
             lblBBC.Name = "lblBBC";
-            lblBBC.Size = new Size(100, 23);
+            lblBBC.Size = new Size(264, 49);
             lblBBC.TabIndex = 10;
-            lblBBC.Text = "BBCBalance:";
+            lblBBC.Text = "BBC Balance:";
+            lblBBC.Click += lblBBC_Click;
             // 
             // txtBBCInput
             // 
-            txtBBCInput.Location = new Point(10, 335);
+            txtBBCInput.Location = new Point(19, 715);
+            txtBBCInput.Margin = new Padding(6);
             txtBBCInput.Name = "txtBBCInput";
-            txtBBCInput.Size = new Size(350, 33);
+            txtBBCInput.Size = new Size(647, 58);
             txtBBCInput.TabIndex = 11;
             // 
             // btnAddUser
             // 
             btnAddUser.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddUser.Location = new Point(10, 374);
+            btnAddUser.Location = new Point(19, 798);
+            btnAddUser.Margin = new Padding(6);
             btnAddUser.Name = "btnAddUser";
-            btnAddUser.Size = new Size(110, 35);
+            btnAddUser.Size = new Size(204, 75);
             btnAddUser.TabIndex = 12;
             btnAddUser.Text = "Add User";
             // 
             // btnUpdateUserInner
             // 
             btnUpdateUserInner.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnUpdateUserInner.Location = new Point(130, 374);
+            btnUpdateUserInner.Location = new Point(241, 798);
+            btnUpdateUserInner.Margin = new Padding(6);
             btnUpdateUserInner.Name = "btnUpdateUserInner";
-            btnUpdateUserInner.Size = new Size(110, 35);
+            btnUpdateUserInner.Size = new Size(204, 75);
             btnUpdateUserInner.TabIndex = 13;
             btnUpdateUserInner.Text = "Update User";
             // 
             // btnDeleteUser
             // 
             btnDeleteUser.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDeleteUser.Location = new Point(250, 374);
+            btnDeleteUser.Location = new Point(464, 798);
+            btnDeleteUser.Margin = new Padding(6);
             btnDeleteUser.Name = "btnDeleteUser";
-            btnDeleteUser.Size = new Size(110, 35);
+            btnDeleteUser.Size = new Size(204, 75);
             btnDeleteUser.TabIndex = 14;
             btnDeleteUser.Text = "Delete User";
             // 
             // btnUpdateUser
             // 
             btnUpdateUser.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnUpdateUser.Location = new Point(313, 81);
+            btnUpdateUser.Location = new Point(581, 173);
+            btnUpdateUser.Margin = new Padding(6);
             btnUpdateUser.Name = "btnUpdateUser";
-            btnUpdateUser.Size = new Size(154, 41);
+            btnUpdateUser.Size = new Size(286, 87);
             btnUpdateUser.TabIndex = 5;
             btnUpdateUser.Text = "Update User Profile";
             btnUpdateUser.UseVisualStyleBackColor = true;
@@ -279,9 +300,10 @@
             // btnSalesReport
             // 
             btnSalesReport.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalesReport.Location = new Point(485, 81);
+            btnSalesReport.Location = new Point(901, 173);
+            btnSalesReport.Margin = new Padding(6);
             btnSalesReport.Name = "btnSalesReport";
-            btnSalesReport.Size = new Size(154, 41);
+            btnSalesReport.Size = new Size(286, 87);
             btnSalesReport.TabIndex = 5;
             btnSalesReport.Text = "View Sales Report";
             btnSalesReport.UseVisualStyleBackColor = true;
@@ -289,19 +311,29 @@
             // btnAddRemove
             // 
             btnAddRemove.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAddRemove.Location = new Point(138, 81);
+            btnAddRemove.Location = new Point(256, 173);
+            btnAddRemove.Margin = new Padding(6);
             btnAddRemove.Name = "btnAddRemove";
-            btnAddRemove.Size = new Size(154, 41);
+            btnAddRemove.Size = new Size(286, 87);
             btnAddRemove.TabIndex = 5;
             btnAddRemove.Text = "Add or Remove User";
             btnAddRemove.UseVisualStyleBackColor = true;
             // 
+            // cmbRole
+            // 
+            cmbRole.FormattingEnabled = true;
+            cmbRole.Items.AddRange(new object[] { "Admin", "Customer", "Chef", "Manager" });
+            cmbRole.Location = new Point(21, 585);
+            cmbRole.Name = "cmbRole";
+            cmbRole.Size = new Size(647, 59);
+            cmbRole.TabIndex = 15;
+            // 
             // Admin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Wheat;
-            ClientSize = new Size(1264, 681);
+            ClientSize = new Size(2347, 1453);
             Controls.Add(btnAddRemove);
             Controls.Add(btnSalesReport);
             Controls.Add(btnUpdateUser);
@@ -310,6 +342,7 @@
             Controls.Add(btnLogOut);
             Controls.Add(txtGreetAdmin);
             Controls.Add(pictureBox1);
+            Margin = new Padding(6);
             Name = "Admin";
             Text = "Admin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -328,16 +361,26 @@
         private Button btnLogOut;
         private Button btnEditProfile;
         private GroupBox grpDashboard;
+        private DataGridView dgvUsers;
         private Button btnUpdateUser;
         private Button btnSalesReport;
         private Button btnAddRemove;
         private Panel pnlInputs;
         private Label lblId;
+        private ComboBox cmbUserId;
         private Label lblName;
         private Label lblEmail;
         private Label lblPassword;
         private Label lblRole;
         private Label lblBBC;
+        private ComboBox cmbRole;
+        private TextBox txtNameInput;
+        private TextBox txtEmailInput;
+        private TextBox txtPasswordInput;
+        private TextBox txtBBCInput;
+        private Button btnAddUser;
+        private Button btnUpdateUserInner;
+        private Button btnDeleteUser;
         // control fields are declared in the Admin partial class where needed
     }
 }

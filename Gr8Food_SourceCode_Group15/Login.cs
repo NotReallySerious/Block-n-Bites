@@ -18,6 +18,15 @@ namespace Gr8Food_SourceCode_Group15
             InitializeComponent();
             btnLogin.Click += BtnLogin_Click;
             btnRegister.Click += BtnRegister_Click;
+            this.Load += FrmLogin_Load;
+        }
+
+        private void FrmLogin_Load(object? sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Session.LastRegisteredEmail))
+            {
+                txtName.Text = Session.LastRegisteredEmail;
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -49,12 +58,24 @@ namespace Gr8Food_SourceCode_Group15
                 var role = Database.AuthenticateUser(username, password);
                 if (role == null)
                 {
-                    MessageBox.Show("Invalid username or password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // diagnostic: check if user exists in DB and show connection info
+                    var connInfo = Database.GetConnectionStringForDiagnostics();
+                    var row = Database.FindUserRecord(username);
+                    if (row == null)
+                    {
+                        MessageBox.Show("Login failed: user not found in database.\nConnection: " + connInfo, "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Login failed: user exists but password did not match.\nConnection: " + connInfo, "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     return;
                 }
 
                 // pass role back to Program via Tag and close dialog with OK
                 this.Tag = role;
+                // store the logged-in username for other forms
+                Session.CurrentUserName = username;
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }

@@ -13,19 +13,41 @@ namespace Gr8Food_SourceCode_Group15
             ApplicationConfiguration.Initialize();
             while (true)
             {
+                try
+                {
+                    Database.TestConnection();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Database connection failed: " + ex.Message + "\nPlease check App.config connection string.", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 using var login = new frmLogin();
                 var result = login.ShowDialog();
                 if (result == System.Windows.Forms.DialogResult.OK)
                 {
-                    var role = login.Tag as string ?? "Profile";
-                    Form main = role switch
+                    var rawRole = (login.Tag as string) ?? string.Empty;
+                    var role = rawRole.Trim();
+                    Form main;
+                    switch (role?.ToLowerInvariant())
                     {
-                        "Admin" => new Admin(),
-                        "Manager" => new Manager(),
-                        "Chef" => new Chef(),
-                        "Customer" => new Customer(),
-                        _ => new Profile()
-                    };
+                        case "admin":
+                            main = new Admin();
+                            break;
+                        case "manager":
+                            main = new Manager();
+                            break;
+                        case "chef":
+                            main = new Chef();
+                            break;
+                        case "customer":
+                            main = new Customer();
+                            break;
+                        default:
+                            main = new Profile();
+                            break;
+                    }
+
                     Application.Run(main);
                     break; // main closed -> exit app
                 }

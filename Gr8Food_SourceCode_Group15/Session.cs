@@ -1,0 +1,8 @@
+namespace Gr8Food_SourceCode_Group15
+{
+    static class Session
+    {
+        public static string? LastRegisteredEmail { get; set; }
+        public static string? CurrentUserName { get; set; }
+    }
+}
