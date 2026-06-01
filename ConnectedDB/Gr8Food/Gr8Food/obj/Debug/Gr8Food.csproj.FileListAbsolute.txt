@@ -1,32 +1,19 @@
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\bin\Debug\Gr8Food.exe.config
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\bin\Debug\Gr8Food.exe
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\bin\Debug\Gr8Food.pdb
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.csproj.AssemblyReference.cache
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.Properties.Resources.resources
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.csproj.GenerateResource.cache
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.csproj.CoreCompileInputs.cache
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.exe
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.pdb
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.MainChef.resources
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.testing.resources
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.Logincs.resources
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefMenu.resources
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefNewItem.resources
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefManageOrders.resources
-C:\Users\Austin\source\repos\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefUpdateProfile.resources
+D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.csproj.AssemblyReference.cache
+D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefMenu.resources
+D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.csproj.GenerateResource.cache
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\bin\Debug\Gr8Food.exe.config
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\bin\Debug\Gr8Food.exe
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\bin\Debug\Gr8Food.pdb
-D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.csproj.AssemblyReference.cache
+D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\bin\Debug\System.Configuration.ConfigurationManager.dll
+D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\bin\Debug\System.Configuration.ConfigurationManager.xml
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefManageOrders.resources
-D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefMenu.resources
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefNewItem.resources
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.ChefUpdateProfile.resources
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.Logincs.resources
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.MainChef.resources
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.testing.resources
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.Properties.Resources.resources
-D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.csproj.GenerateResource.cache
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.csproj.CoreCompileInputs.cache
+D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.csproj.Up2Date
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.exe
 D:\IT AND CS\Gr8Food\ConnectedDB\Gr8Food\Gr8Food\obj\Debug\Gr8Food.pdb

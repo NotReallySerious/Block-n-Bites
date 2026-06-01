@@ -89,5 +89,10 @@ namespace Gr8Food
                 MessageBox.Show("Unexpected error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void frmLogin_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

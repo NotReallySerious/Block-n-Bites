@@ -32,126 +32,127 @@ namespace Gr8Food
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmregister));
-            pictureBox1 = new PictureBox();
-            label1 = new Label();
-            txtName = new TextBox();
-            label2 = new Label();
-            txtEmail = new TextBox();
-            label3 = new Label();
-            txtPassword = new TextBox();
-            btnRegister = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnRegister = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(544, 26);
-            pictureBox1.Margin = new Padding(6, 6, 6, 6);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1244, 529);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            pictureBox1.Visible = false;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(502, 20);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1148, 413);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(544, 587);
-            label1.Margin = new Padding(6, 0, 6, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(555, 72);
-            label1.TabIndex = 2;
-            label1.Text = "Enter your username";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(502, 459);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(555, 72);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Enter your username";
             // 
             // txtName
             // 
-            txtName.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtName.Location = new Point(544, 693);
-            txtName.Margin = new Padding(6, 6, 6, 6);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(1410, 50);
-            txtName.TabIndex = 3;
+            this.txtName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(502, 541);
+            this.txtName.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(1302, 50);
+            this.txtName.TabIndex = 3;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(544, 772);
-            label2.Margin = new Padding(6, 0, 6, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(445, 72);
-            label2.TabIndex = 2;
-            label2.Text = "Enter your email";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(502, 603);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(445, 72);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Enter your email";
             // 
             // txtEmail
             // 
-            txtEmail.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEmail.Location = new Point(544, 885);
-            txtEmail.Margin = new Padding(6, 6, 6, 6);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(1410, 50);
-            txtEmail.TabIndex = 3;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(502, 691);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(1302, 50);
+            this.txtEmail.TabIndex = 3;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(544, 975);
-            label3.Margin = new Padding(6, 0, 6, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(547, 72);
-            label3.TabIndex = 2;
-            label3.Text = "Enter your Password";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(502, 762);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(547, 72);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Enter your Password";
             // 
             // txtPassword
             // 
-            txtPassword.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.Location = new Point(544, 1088);
-            txtPassword.Margin = new Padding(6, 6, 6, 6);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(1410, 50);
-            txtPassword.TabIndex = 3;
+            this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(502, 850);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(1302, 50);
+            this.txtPassword.TabIndex = 3;
             // 
             // btnRegister
             // 
-            btnRegister.BackColor = Color.Lime;
-            btnRegister.FlatStyle = FlatStyle.Popup;
-            btnRegister.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRegister.ForeColor = SystemColors.Control;
-            btnRegister.Location = new Point(897, 1205);
-            btnRegister.Margin = new Padding(6, 6, 6, 6);
-            btnRegister.Name = "btnRegister";
-            btnRegister.Size = new Size(680, 102);
-            btnRegister.TabIndex = 4;
-            btnRegister.Text = "Register Your Account";
-            btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.BackColor = System.Drawing.Color.Lime;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRegister.Location = new System.Drawing.Point(828, 941);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(628, 80);
+            this.btnRegister.TabIndex = 4;
+            this.btnRegister.Text = "Register Your Account";
+            this.btnRegister.UseVisualStyleBackColor = false;
             // 
             // frmregister
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(2347, 1453);
-            Controls.Add(btnRegister);
-            Controls.Add(txtPassword);
-            Controls.Add(txtEmail);
-            Controls.Add(label3);
-            Controls.Add(txtName);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(pictureBox1);
-            DoubleBuffered = true;
-            Margin = new Padding(6, 6, 6, 6);
-            Name = "frmregister";
-            Text = "register";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(2166, 1135);
+            this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.Name = "frmregister";
+            this.Text = "register";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
