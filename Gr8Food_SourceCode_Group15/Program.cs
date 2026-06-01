@@ -44,7 +44,7 @@ namespace Gr8Food_SourceCode_Group15
                             main = new Customer();
                             break;
                         default:
-                            main = new Profile();
+                            main = new frmProfile();
                             break;
                     }
 

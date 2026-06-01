@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
+using System.Data.SqlClient;
 
-
-namespace Block_n_bites
+namespace Gr8Food
 {
+
     public class DBHelper
     {
-        // change this to match YOUR database name
+        // |DataDirectory| automatically points to 
+        // wherever the project folder is
+        // this makes it work on ALL computers
         private static string connectionString =
-            "Data Source=.\\SQLEXPRESS;Initial Catalog=Gr8FoodDB;Integrated Security=True";
+            @"Data Source=(LocalDB)\MSSQLLocalDB;" +
+             "AttachDbFilename=C:\\Users\\Austin\\source\\repos\\Gr8Food\\Gr8Food\\Gr8FoodDB.mdf;" +
+             "Integrated Security=True";
 
-        // returns a connection object that forms can use
         public static SqlConnection GetConnection()
         {
             return new SqlConnection(connectionString);

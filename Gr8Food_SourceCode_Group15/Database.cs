@@ -2,7 +2,7 @@ using System;
 using System.Data;
 using Microsoft.Data.SqlClient;
 
-namespace Gr8Food_SourceCode_Group15
+namespace Gr8Food
 {
     static class Database
     {

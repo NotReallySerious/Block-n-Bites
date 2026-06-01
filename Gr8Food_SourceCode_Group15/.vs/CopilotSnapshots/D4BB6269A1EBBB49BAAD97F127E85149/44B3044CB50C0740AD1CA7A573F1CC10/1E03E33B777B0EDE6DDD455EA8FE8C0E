@@ -1,0 +1,175 @@
+﻿using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Windows.Forms;
+
+namespace Gr8Food_SourceCode_Group15
+{
+    public partial class Admin : Form
+    {
+        // Add new UI elements in code-behind to avoid modifying Designer too much
+        private Panel pnlReport;
+        private Label lblReportFilter;
+        private TextBox txtFilterInput;
+        private Button btnSortByDate;
+        private Button btnSortByChef;
+        private Button btnSortByCategory;
+        private ComboBox cmbSortOrder; // Ascending/Descending
+        private DataGridView dgvReport;
+
+        private void InitializeSalesReportControls()
+        {
+            // create panel
+            pnlReport = new Panel()
+            {
+                Location = new System.Drawing.Point(37, 100),
+                Size = new System.Drawing.Size(2155, 900),
+                Name = "pnlReport"
+            };
+
+            lblReportFilter = new Label()
+            {
+                Location = new System.Drawing.Point(30, 20),
+                Size = new System.Drawing.Size(300, 30),
+                Text = "Enter filter (date dd/MM/yyyy, chef name or category):"
+            };
+
+            txtFilterInput = new TextBox()
+            {
+                Location = new System.Drawing.Point(35, 60),
+                Size = new System.Drawing.Size(400, 40),
+                Name = "txtFilterInput"
+            };
+
+            cmbSortOrder = new ComboBox()
+            {
+                Location = new System.Drawing.Point(450, 60),
+                Size = new System.Drawing.Size(160, 40),
+                DropDownStyle = ComboBoxStyle.DropDownList
+            };
+            cmbSortOrder.Items.AddRange(new object[] { "Ascending", "Descending" });
+            cmbSortOrder.SelectedIndex = 0;
+
+            btnSortByDate = new Button()
+            {
+                Location = new System.Drawing.Point(630, 50),
+                Size = new System.Drawing.Size(220, 60),
+                Text = "Sort based on Date",
+                Name = "btnSortByDate"
+            };
+            btnSortByDate.Click += BtnSortByDate_Click;
+
+            btnSortByChef = new Button()
+            {
+                Location = new System.Drawing.Point(870, 50),
+                Size = new System.Drawing.Size(220, 60),
+                Text = "Sort based on Chef",
+                Name = "btnSortByChef"
+            };
+            btnSortByChef.Click += BtnSortByChef_Click;
+
+            btnSortByCategory = new Button()
+            {
+                Location = new System.Drawing.Point(1110, 50),
+                Size = new System.Drawing.Size(260, 60),
+                Text = "Sort based on Category",
+                Name = "btnSortByCategory"
+            };
+            btnSortByCategory.Click += BtnSortByCategory_Click;
+
+            dgvReport = new DataGridView()
+            {
+                Location = new System.Drawing.Point(30, 130),
+                Size = new System.Drawing.Size(2050, 740),
+                ReadOnly = true,
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
+                Name = "dgvReport"
+            };
+
+            pnlReport.Controls.Add(lblReportFilter);
+            pnlReport.Controls.Add(txtFilterInput);
+            pnlReport.Controls.Add(cmbSortOrder);
+            pnlReport.Controls.Add(btnSortByDate);
+            pnlReport.Controls.Add(btnSortByChef);
+            pnlReport.Controls.Add(btnSortByCategory);
+            pnlReport.Controls.Add(dgvReport);
+
+            // Add panel to group dashboard (so stays inside existing layout).
+            grpDashboard.Controls.Add(pnlReport);
+        }
+
+        private void BtnSortByDate_Click(object sender, EventArgs e)
+        {
+            var input = txtFilterInput.Text.Trim();
+            DateTime parsedDate;
+            if (!DateTime.TryParseExact(input, new[] { "dd/MM/yyyy", "d/M/yyyy", "yyyy-MM-dd" }, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out parsedDate))
+            {
+                MessageBox.Show("Invalid date format. Use dd/MM/yyyy", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var order = cmbSortOrder.SelectedItem.ToString() == "Ascending" ? "ASC" : "DESC";
+            var query = @"SELECT s.SaleID, s.SaleDate, p.ProductName, p.Category, c.Name AS ChefName, s.Quantity, s.Total
+FROM Sales s
+LEFT JOIN Products p ON s.ProductID = p.ProductID
+LEFT JOIN Chefs c ON p.ChefID = c.ChefID
+WHERE CAST(s.SaleDate AS date) = @SaleDate
+ORDER BY s.SaleDate " + order;
+
+            var dt = ExecuteQuery(query, new SqlParameter("@SaleDate", parsedDate.Date));
+            dgvReport.DataSource = dt;
+        }
+
+        private void BtnSortByChef_Click(object sender, EventArgs e)
+        {
+            var input = txtFilterInput.Text.Trim();
+            var order = cmbSortOrder.SelectedItem.ToString() == "Ascending" ? "ASC" : "DESC";
+            var query = @"SELECT s.SaleID, s.SaleDate, p.ProductName, p.Category, c.Name AS ChefName, s.Quantity, s.Total
+FROM Sales s
+LEFT JOIN Products p ON s.ProductID = p.ProductID
+LEFT JOIN Chefs c ON p.ChefID = c.ChefID
+WHERE (@ChefName = '' OR c.Name LIKE '%' + @ChefName + '%')
+ORDER BY c.Name " + order + ", s.SaleDate DESC";
+
+            var dt = ExecuteQuery(query, new SqlParameter("@ChefName", input));
+            dgvReport.DataSource = dt;
+        }
+
+        private void BtnSortByCategory_Click(object sender, EventArgs e)
+        {
+            var input = txtFilterInput.Text.Trim();
+            var order = cmbSortOrder.SelectedItem.ToString() == "Ascending" ? "ASC" : "DESC";
+            var query = @"SELECT s.SaleID, s.SaleDate, p.ProductName, p.Category, c.Name AS ChefName, s.Quantity, s.Total
+FROM Sales s
+LEFT JOIN Products p ON s.ProductID = p.ProductID
+LEFT JOIN Chefs c ON p.ChefID = c.ChefID
+WHERE (@Category = '' OR p.Category LIKE '%' + @Category + '%')
+ORDER BY p.Category " + order + ", s.SaleDate DESC";
+
+            var dt = ExecuteQuery(query, new SqlParameter("@Category", input));
+            dgvReport.DataSource = dt;
+        }
+
+        private DataTable ExecuteQuery(string sql, params SqlParameter[] parameters)
+        {
+            var dt = new DataTable();
+            try
+            {
+                using var conn = new SqlConnection(Database.ConnectionString);
+                using var cmd = new SqlCommand(sql, conn);
+                if (parameters != null && parameters.Length > 0)
+                    cmd.Parameters.AddRange(parameters);
+                using var adapter = new SqlDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Database query failed: " + ex.Message, "DB Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
+
+        // Call InitializeSalesReportControls from Admin_Load
+    }
+}

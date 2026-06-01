@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
 
-namespace Gr8Food_SourceCode_Group15
+namespace Gr8Food
 {
     public partial class frmLogin : Form
     {
