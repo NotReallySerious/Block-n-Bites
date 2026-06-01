@@ -1,0 +1,15 @@
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\bin\Debug\CustomerForm.exe.config
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\bin\Debug\CustomerForm.exe
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\bin\Debug\CustomerForm.pdb
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\obj\Debug\CustomerForm.csproj.AssemblyReference.cache
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\obj\Debug\CustomerForm.CustomerMenu.resources
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\obj\Debug\CustomerForm.Properties.Resources.resources
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\obj\Debug\CustomerForm.csproj.GenerateResource.cache
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\obj\Debug\CustomerForm.csproj.CoreCompileInputs.cache
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\obj\Debug\CustomerForm.exe
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\obj\Debug\CustomerForm.pdb
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\obj\Debug\CustomerForm.BrowseMenu.resources
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\obj\Debug\CustomerForm.ViewOrder.resources
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\obj\Debug\CustomerForm.UpdateProfile.resources
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\obj\Debug\CustomerForm.Logout.resources
+C:\Users\Audy\OneDrive\Documents\APU Teaching materials\SEM 2\IOOP Object Oriented Programming\Workcourse\CustomerForm\CustomerForm\obj\Debug\CustomerForm.Login.resources
